@@ -13,10 +13,17 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
+<<<<<<< HEAD
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
+=======
+      - name: Log in to Heroku Docker Registry
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: echo "$HEROKU_API_KEY" 
+>>>>>>> d8f1c20308093355f758c4c9f05029c93ae16044
 
     - name: Install dependencies
       run: |
